@@ -1,0 +1,393 @@
+$blue-white: #EAEAF1;
+
+/* Mixins */
+
+@mixin title($alignment){
+  text-align: $alignment;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* Panel mixins */
+@mixin panel($bg-color){
+  border: 2px solid black;
+  margin: 20px;
+  background-color: $bg-color;
+}
+
+@mixin content-paragraph{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bolder;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/*Content*/
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+  @include title(center);
+}
+
+hr {
+  width: 30px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/*Navbar*/
+.page {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+   height: 100%;
+   width: 100%;
+   position: fixed; /* Stay in place */
+   z-index: 10; /* Sit on top */
+   left: 0;
+   top: 0;
+   background-color: rgba(255,231,135,0.7);
+   overflow-x: hidden; /* Disable horizontal scroll */
+   overflow-y: hidden; /* Disable horizontal scroll */
+}
+
+.menuContent {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: -100px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+   a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-decoration: none;
+    color: inherit;
+    margin: 10%;
+  }
+
+}
+
+#hamburger {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 9999;
+  width: 40px;
+  height: 80px;
+}
+
+.burgerBars {
+  position: absolute;
+  height: 5%;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  background: white;
+
+  &:nth-child(1){
+    top: 20%;
+  }
+  &:nth-child(2){
+    top: 40%;
+  }
+  &:nth-child(3){
+    top: 60%;
+  }
+}
+
+#hamburger:hover > * {
+  background: pink;
+  cursor: pointer;
+}
+
+/*Cover*/
+.Cover-panel {
+  position:relative;
+  height:800px;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.logo {
+  height: 250px;
+  width: 100%;
+  background-image: url("http://i.imgur.com/MXt4aEt.png");
+  background-size: 500px 264px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px
+}
+
+/*About*/
+.About-panel {
+  @include panel('none');
+  padding: 100px 300px;
+  text-align: center;
+}
+
+/*Education*/
+.Education-panel {
+  display: flex;
+  justify-content: space-around;
+
+    .Education {
+      // height: 100%;
+      width: 40%;
+
+      > div {
+        margin: 15px 15px 30px 60px;
+        // padding: 10px;
+        // padding-left: 25px;
+        h1 {
+          @include title(left);
+        }
+        div {
+          border: 2px solid white;
+
+          &:hover{
+            border: 2px solid black;
+            cursor: pointer;
+          }
+
+          p {
+            @include content-paragraph;
+            color: #1EAEDB;
+          }
+        }
+      }
+    }
+
+    .Education-info {
+      overflow: hidden;
+      background-image: url("https://static.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg");
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      // height: 100%;
+      width: 60%;
+      padding: 30px;
+
+      .Education-paddedbackground{
+        background-color: white;
+        height: 100%;
+        border: 4px solid black;
+        div{
+          padding: 10px;
+          h3 {
+            @include title(left);
+          }
+          h6 {
+            font-weight: bolder;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+}
+
+
+/*Experience*/
+.Experience-panel {
+  display: flex;
+  justify-content: space-around;
+  > div:first-child {
+
+    background-color: #EEEEEE;
+    width: 60%;
+    padding: 20px 60px;
+    height: 100%;
+
+    div {
+      background-color: white;
+      // height: 100%;
+      border: 4px solid black;
+      padding: 10px;
+        h3 {
+          @include title(left);
+        }
+        h6 {
+          font-weight: bolder;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+        }
+
+    }
+  }
+
+  .Experience {
+    // height: 100%;
+    width: 40%;
+
+    > div {
+        margin: 15px 15px 30px 45px;
+        h1 {
+          @include title(left);
+        }
+      div {
+        border: 2px solid white;
+
+        &:hover{
+          border: 2px solid black;
+          cursor: pointer;
+        }
+
+        p {
+          @include content-paragraph;
+          color: #1EAEDB
+        }
+      }
+    }
+
+  }
+}
+
+/*Showcase*/
+.Showcase-panel {
+  @include panel(white);
+
+  .projNav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 37px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    .borderbottom {
+      border-bottom: 2px solid black;
+    }
+    div {
+      border-bottom: 2px solid white;
+      cursor: pointer;
+
+      &:hover{
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+
+  .showcase-content {
+    // height: 100%;
+    padding: 30px 100px;
+
+    h3 {
+      text-align: left;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+
+      a {text-decoration: none}
+    }
+  }
+
+}
+
+.parentflex {
+
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin-right: 40px
+  }
+
+  .description {
+    div {
+      margin-right: 40px
+    }
+  }
+
+  h6 {
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+/*Contact Me*/
+.Contact-bubble {
+  border-radius: 100%;
+  background-color: pink;
+  height: 60px;
+  width: 60px;
+  z-index: 9999;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 25px rgba(0,0,0,0.5);
+
+  i {
+    color: white;
+
+  }
+}
+
+.Contact-info {
+  height: 200px;
+  width: 200px;
+  bottom: 105px;
+  right: 40px;
+  z-index: 9999;
+  position: fixed;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 50px rgba(0,0,0,0.3);
+
+  div {
+
+    h6 {
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      margin-left: 10px;
+      font-size: 13px;
+    }
+
+    p {
+      margin-bottom: 0;
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 13px;
+    }
+  }
+}
+.contact-hr {
+  margin: 10px 0px;
+  width: 100%;
+}
+.triangle {
+  z-index: 9999;
+  position: fixed;
+  bottom: 85px;
+  right: 40px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
+}
