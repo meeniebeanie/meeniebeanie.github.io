@@ -27,6 +27,32 @@ $blue-white: #EAEAF1;
   text-transform: uppercase;
 }
 
+@mixin quotes {
+  padding: 30px;
+  display: flex;
+
+  .quoted {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+  }
+
+  .quote {
+    p {
+      font-size: 0.9em;
+      font-family: "Times New Roman", Times, serif;
+      text-align: justify;
+      text-justify: inter-word;
+
+      &:nth-child(2){
+        text-align:right;
+      }
+    }
+
+  }
+}
+
 /*Content*/
 
 * {
@@ -233,7 +259,7 @@ li {
     padding: 20px 60px;
     height: 100%;
 
-    div {
+    > div {
       background-color: white;
       // height: 100%;
       border: 4px solid black;
@@ -245,6 +271,10 @@ li {
           font-weight: bolder;
           letter-spacing: 3px;
           text-transform: uppercase;
+        }
+
+        > div {
+          @include quotes
         }
 
     }
