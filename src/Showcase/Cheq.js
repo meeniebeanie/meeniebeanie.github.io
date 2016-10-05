@@ -5,7 +5,7 @@ class Cheq extends Component {
   render(){
     return(
       <div className="showcase-content">
-        <h3><a href="https://meeniebeanie.github.io/karakom-/">CHEQ</a></h3>
+        <h3><a href="http://bit.ly/cheq--/">CHEQ</a></h3>
         <div className="parentflex">
           <div>
             <div>
@@ -15,27 +15,25 @@ class Cheq extends Component {
               <div>
                 <h6>What I like about it:</h6>
                 <ul>
-                <li>The music cover is awesome.</li>
-                <li>It is really fun.</li>
-                <li>I love the colours and the simple UI.</li>
+                <li>It's super functional!</li>
+                <li>Facebook OAuth login to easily select friends!</li>
                 </ul>
               </div>
               <div>
                 <h6>What I would change:</h6>
                 <ul>
-                <li>Take into account players hitting backspace</li>
-                <li>Take into account errors</li>
-                <li>New songs maybe?</li>
+                <li>Make it more visual by grabbing profile pictures.</li>
+                <li>Optimize for mobile.</li>
                 </ul>
               </div>
             </div>
             <div>
             <h6>Built Using</h6>
-            <p>Node.JS / Express / React.js / MongoDB / Bootstrap</p>
+            <p>Node.JS / Express / React.js / MongoDB / Bulma</p>
             </div>
           </div>
           <div>
-            <a href="https://meeniebeanie.github.io/karakom-/"><img  src="https://media.giphy.com/media/adwyFv25LoTHG/giphy.gif" width="480" height="342"></img></a>
+            <a href="http://bit.ly/cheq--/"><img  src="https://media.giphy.com/media/adwyFv25LoTHG/giphy.gif" width="480" height="342"></img></a>
           </div>
         </div>
       </div>

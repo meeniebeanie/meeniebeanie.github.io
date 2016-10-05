@@ -5,7 +5,7 @@ class Tompang extends Component {
   render(){
     return(
       <div className="showcase-content">
-        <h3><a href="https://meeniebeanie.github.io/karakom-/">TOMPANG</a></h3>
+        <h3><a href="http://bit.ly/tompang--">TOMPANG</a></h3>
         <div className="parentflex">
           <div>
             <div>
@@ -34,7 +34,7 @@ class Tompang extends Component {
             </div>
           </div>
           <div>
-            <a href="https://meeniebeanie.github.io/karakom-/"><img  src="https://media.giphy.com/media/adwyFv25LoTHG/giphy.gif" width="480" height="342"></img></a>
+            <a href="http://bit.ly/tompang--"><img  src="https://media.giphy.com/media/GOCKml9nCzuyA/giphy.gif" width="480" height="342"></img></a>
           </div>
         </div>
       </div>
