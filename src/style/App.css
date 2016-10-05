@@ -254,11 +254,13 @@ li {
 
 .parentflex {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%; }
   .parentflex p {
     margin-right: 40px; }
   .parentflex .description div {
-    margin-right: 40px; }
+    margin-right: 40px;
+    width: 50%; }
   .parentflex h6 {
     font-weight: bolder;
     letter-spacing: 2px;

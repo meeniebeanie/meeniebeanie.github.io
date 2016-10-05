@@ -310,13 +310,16 @@ li {
 
   display: flex;
   justify-content: space-between;
+  width: 100%;
+
   p {
     margin-right: 40px
   }
 
   .description {
     div {
-      margin-right: 40px
+      margin-right: 40px;
+      width: 50%;
     }
   }
 
