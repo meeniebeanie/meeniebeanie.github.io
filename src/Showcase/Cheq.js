@@ -9,7 +9,7 @@ class Cheq extends Component {
         <div className="parentflex">
           <div>
             <div>
-              <p>Keep check and split your expenses with friends! A group project, built with Barney and Zhezhang.</p>
+              <p>Keep check and split your expenses with friends! A group project, built with<a href="https://github.com/zephitez/CHEQ"> Barney and Zhezhang.</a></p>
             </div>
             <div className="description parentflex">
               <div>

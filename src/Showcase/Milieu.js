@@ -9,7 +9,7 @@ class Milieu extends Component {
         <div className="parentflex">
           <div>
             <div>
-              <p>Milieu tracks consumer sentiments. A group project, built with Gerald, Weiyang and Someone. The server side aggregates data from surveys filled out by consumers, while the client side display these information to track consumer sentiment, alongside a twitter sentiment dashboard.</p>
+              <p>Milieu tracks consumer sentiments. A group project, built with <a href="https://github.com/wdi-milieu">Gerald, Weiyang and Chong.</a> The server side aggregates data from surveys filled out by consumers, while the client side display these information to track consumer sentiment, alongside a twitter sentiment dashboard.</p>
             </div>
             <div className="description parentflex">
               <div>
