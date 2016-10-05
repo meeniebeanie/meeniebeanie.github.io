@@ -48,6 +48,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+li {
+  list-style-position: outside;
+  list-style-type: none;
+}
 
 /*Navbar*/
 .page {
